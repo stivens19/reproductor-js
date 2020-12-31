@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Yellowtail&display=swap');
+:root {
+    --principal: rgb(0, 0, 0);
+    --secundario: rgba(101, 180, 194, 0.972);
+    --texto: rgba(240, 251, 252, 0.801);
+    --font-principal:'Roboto', sans-serif;
+    --font-secundario:'Yellowtail', cursive;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-principal);
+}
+
+
+.bg-principal{
+    background: var(--principal);
+}
+.bg-secundario{
+    background: var(--secundario);
+}
+.text-principal{
+    color: var(--principal);
+}
+.text-secundario{
+    color: var(--secundario);
+}
+.text-texto{
+    color: var(--texto);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-y: scroll;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.col-2,.col-3,.col-4{
+    padding: 10px;
+}
+.col-2{
+    flex: 1 0 calc(50% - 10px);
+}
+.col-3{
+    flex: 1 0 calc(33.3% - 10px);
+}
+.col-4{
+    flex: 1 0 calc(25% - 10px);
+}
+.logo{
+    font-size: 30px;
+    color: var(--secundario);
+    font-family: var(--font-secundario);
+}
+.card{
+    width:92%;
+    height:92%;
+    border-radius: .5rem;
+    border: solid .5px rgba(163, 163, 163, 0.226);
+}
+.card-content{
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+.card-image img{
+    width: 96%;
+    display: block;
+    margin: auto auto;
+}
+
+#files{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.carga{
+    text-align: right;
+    font-size: 30px;
+}
+.card-header{
+    border-bottom:solid .5px var(--secundario) ;
+}
+.control{
+    font-size: 50px;
+    text-align: center;
+    color: var(--secundario);
+    cursor: pointer;
+}
+
+ul{
+    margin-top: 10px;
+    list-style:none;
+    color: white;
+    width: 100%;
+}
+.list-item{
+    padding: 10px;
+    border-top: solid .3px var(--texto);
+    
+}
+#name-music{
+    font-size: 15px;
+}
+@media screen and (min-width: 450px) {
+  .card{
+      width: 40%;
+  }
+  .card-image img{
+    width: 70%;
+  }
+}
